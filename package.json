@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "chai": "^3.5.0",
+    "enzyme": "^2.6.0",
+    "jsdom": "^9.9.1",
     "react-scripts": "0.8.4"
   },
   "dependencies": {
     "react": "^15.4.1",
+    "react-addons-test-utils": "^15.2.0",
     "react-dom": "^15.4.1"
   },
   "scripts": {
