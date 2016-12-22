@@ -23,7 +23,7 @@ describe('<App/>', function () {
   it('should have Form', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find('Form')).to.have.length(1);
-    expeect(wrapper.props().handleSubmit).to.be.defined;
+    expect(wrapper.props().handleSubmit).to.be.defined;
     expect(wrapper.props().horizontal).to.be.defined;
     //form tag should have props, this.handlesubmit,horiszontal
   });
