@@ -6,6 +6,8 @@ import { Form, FormGroup, FormControl, Button } from 'react-bootstrap';
 class App extends Component {
   constructor() {
     super();
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       bookName: "",
       bookList: []
@@ -22,6 +24,7 @@ class App extends Component {
     return fetch(url + this.state.bookName).then(response => {
       return response.json()
     }).then(data => {
+      console.log(data, "is data here")
       this.setState({ bookList: data.items });
 
     })
