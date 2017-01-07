@@ -1,14 +1,23 @@
 const path = require("path");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry:[
+    entry: [
         './src/index.js'
     ],
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    module:{
+    plugins: [
+        new ExtractTextPlugin('[name].css'),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html'
+        })
+    ],
+    module: {
         loaders: [
             {
                 test: /\.js$/,
@@ -17,6 +26,15 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015']
                 }
+            }, {
+                test: /\.css$/,
+                loader: 'style-loader'
+            }, {
+                test: /\.css$/,
+                loader: 'css-loader'
+            }, {
+                test: /\.svg$/,
+                loader: 'svg-loader'
             }
         ]
     },

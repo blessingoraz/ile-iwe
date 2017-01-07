@@ -47,6 +47,7 @@ class App extends Component {
   }
   
   render() {
+    console.log('got here')
     return (
       <div className="App">
         <div className="App-header">
