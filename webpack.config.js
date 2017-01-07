@@ -13,7 +13,7 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
+            filename: '/index.html',
             template: 'index.html'
         })
     ],
