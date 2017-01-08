@@ -40,5 +40,10 @@ module.exports = {
     },
     devServer: {
         port: 5000
+    },
+    externals: {
+        'cheerio': 'window',
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true,
     }
 }
