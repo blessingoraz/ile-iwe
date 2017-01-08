@@ -70,7 +70,6 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>Search for books</h2>
-          <FormBook onChange={this.handleChange} onSubmit={this.handleSubmit}/>
         </div>
         {this.showBooks()}
       </div>
