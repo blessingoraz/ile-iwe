@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../css/App.css';
 import { Form, FormGroup, FormControl, Button } from 'react-bootstrap';
-import FormBook from "./FormBook";
+import NavBar from "./NavBar";
 
 class App extends Component {
   constructor() {
@@ -52,11 +52,11 @@ class App extends Component {
       return (
         <div className="container">
           <div className="row">
-              {this.state.bookList.map((book) => {
-                return this.bookCards(book);
-              })})
+            {this.state.bookList.map((book) => {
+              return this.bookCards(book);
+            })})
           </div>
-      </div>)
+        </div>)
 
     } else {
       return (<div>
@@ -67,10 +67,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Search for books</h2>
-        </div>
+      <div>
+        <NavBar onChange={this.handleChange} onSubmit={this.handleSubmit} />
         {this.showBooks()}
       </div>
     );

@@ -1,13 +1,13 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import logo from '../logo.svg';
 import '../css/App.css';
 import { Form, FormGroup, FormControl, Button } from 'react-bootstrap';
 
-const FormBook = ({onSubmit, onChange}) => {
+const FormBook = (props) => {
   return (
-    <Form inline onSubmit={onSubmit}>
+    <Form inline onSubmit={props.onSubmit}>
       <FormGroup bsSize="small">
-        <FormControl type="text" placeholder="Search for books" onChange={onChange}></FormControl>
+        <FormControl id="searchForm" type="text" placeholder="Search for books" onChange={props.onChange} style={{"width": "40em", "marginLeft": "100px"}}></FormControl>
       </FormGroup>
       {' '}
       <Button type="submit">Search </Button>
@@ -15,9 +15,9 @@ const FormBook = ({onSubmit, onChange}) => {
   )
 }
 
-FormBook.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.func.isRequired
-}
+// FormBook.propTypes = {
+//   onSubmit: React.PropTypes.func,
+//   onChange: React.PropTypes.func
+// }
 
 export default FormBook;
