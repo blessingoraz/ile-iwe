@@ -9,7 +9,6 @@ class Main extends React.Component {
   render() {
     return(
       <div>
-        <NavBar/>
         <App/>
       </div>
     )

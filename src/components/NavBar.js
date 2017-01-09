@@ -1,12 +1,10 @@
-import React from "react";
+import React, {PropTypes} from "react";
 import ReactDOM from "react-dom";
 import FormBook from "./FormBook";
 import { Navbar, Nav , NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 
-
-class NavBar extends React.Component {
-  render() {
-    return (
+const NavBar = (onChange, onSubmit)=> {
+  return (
       <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
@@ -16,7 +14,7 @@ class NavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <FormBook/>
+            <FormBook onChange={onChange} onSubmit={onSubmit}/>
           </Nav>
           <Nav pullRight>
             <NavItem eventKey={1} href="#">Login</NavItem>
@@ -25,7 +23,11 @@ class NavBar extends React.Component {
         </Navbar.Collapse>
       </Navbar>
     )
-  }
 }
+
+// NavBar.propTypes = {
+//   onChange: React.PropTypes.func,
+//   onSubmit: React.PropTypes.func
+// }
 
 export default NavBar;
