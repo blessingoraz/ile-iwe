@@ -1,21 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-import NavBar from './components/NavBar';
 import './css/index.css';
+import routes from "./config/routes"
 
-class Main extends React.Component {
-  // console.log(NavBar);
-  render() {
-    return(
-      <div>
-        <App/>
-      </div>
-    )
-  }
-}
 
-ReactDOM.render(
-  <Main/>,
-  document.getElementById('root')
-);
+ReactDOM.render(routes,document.getElementById('root'));
