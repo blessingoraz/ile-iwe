@@ -15,9 +15,9 @@ const FormBook = (props) => {
   )
 }
 
-// FormBook.propTypes = {
-//   onSubmit: React.PropTypes.func,
-//   onChange: React.PropTypes.func
-// }
+FormBook.propTypes = {
+  onSubmit: React.PropTypes.func,
+  onChange: React.PropTypes.func
+}
 
 export default FormBook;
