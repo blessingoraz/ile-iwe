@@ -4,6 +4,8 @@ import '../css/App.css';
 import { Form, FormGroup, FormControl, Button } from 'react-bootstrap';
 import NavBar from "./NavBar";
 
+//TODO: not rendering
+
 class App extends Component {
   constructor() {
     super();
@@ -67,10 +69,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <NavBar onChange={this.handleChange} onSubmit={this.handleSubmit} />
-        {this.showBooks()}
-      </div>
+        <NavBar onChange={this.handleChange} onSubmit={this.handleSubmit}>
+          {this.showBooks()}
+        </NavBar>
     );
   }
 }
